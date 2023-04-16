@@ -14,7 +14,7 @@ class BaseModel:
         self.updated_at = datetime.today()
     def __str__(self):
         """ Returns the string representation of the Basemodel class """
-        return f"[{self.__name__}] ({ self.id}) {str(self.__dict__}"
+        return f"[{self.__name__}] ({ self.id}) {str(self.__dict__)}"
 
     def save(self):
         """ updates the attribute "save as" with the current datestamp """
@@ -29,7 +29,7 @@ instance it represents """
 
         for key, value in self.__dict__.items():
             if key == 'created_at' or key == 'updated_at':
-                new_dict[key] = values.strftime("%Y-%m-%dT%H:%M:%S.%f")
+                inst_dict[key] = value.strftime("%Y-%m-%dT%H:%M:%S.%f")
             else:
                 if not value:
                     pass

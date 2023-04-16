@@ -14,7 +14,7 @@ class BaseModel:
         self.updated_at = datetime.today()
     def __str__(self):
         """ Returns the string representation of the Basemodel class """
-        return f"[{self.__name__}] ({ self.id}) {str(self.__dict__)}"
+        return f"[{self.__class__.__name__}] ({ self.id}) {str(self.__dict__)}"
 
     def save(self):
         """ updates the attribute "save as" with the current datestamp """

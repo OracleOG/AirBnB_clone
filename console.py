@@ -8,12 +8,12 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = 'hbnb'
 
-     def emptyline(self):
+    def emptyline(self):
         """ implements empty line + enter, to execute nothing """
         pass
 
     def help_help(self):
-        print ('provindes infmation to the given command \n help [command]')
+        print('provindes infmation to the given command \n help [command]')
 
     def do_quit(self, line):
         """ implements the quit statement to exit te console """

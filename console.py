@@ -16,7 +16,7 @@ class HBNBCommand(cmd.Cmd):
         print('provindes infmation to the given command \n help [command]')
 
     def do_quit(self, line):
-        """ implements the quit statement to exit te console """
+        """ Quit commsnd to exit the commnd interpreter """
         return True
 
     def do_EOF(self, line):

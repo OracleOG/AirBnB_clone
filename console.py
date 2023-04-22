@@ -21,10 +21,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, line):
         """ implements the End_of_file attribute """
-        if line == 'quit':
-            return True
-        else:
-            return True
+        return True
 
     if __name__ == '__main__':
         HBNBCOmmand().cmdloop()

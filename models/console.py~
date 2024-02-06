@@ -1,7 +1,0 @@
-#!/usr/bin/python3
-""" a module for the command intepreter"""
-import cmd
-
-
-class HBNBCommand(cmd.Cmd):
-    

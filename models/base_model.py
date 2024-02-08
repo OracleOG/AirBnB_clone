@@ -13,20 +13,30 @@ class BaseModel:
     Attr: id, created_at, updated_at
     ARGS: save, to_dict
     """
-    def __init__(self, id, created_at, updated_at):
+    def __init__(self):
         self.id = str(uuid.uuid4())
-        self.created_at = ((datetime.now()).strftime("%Y-%m-%dT%H:%M:%S.%f"))
-        self.updated_at = (datetime.now()).strftime("%Y-%m-%dT%H:%M:%S.%f")
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
 
 
     def __str__(self):
         """returns a formated string reprentation of the object"""
         class_name = "BaseModel"
-        print(f"[{class_name}] ({self.id}) {self.__dict__}")
+        return (f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}")
 
     def save(self):
         """updates the public instance attribute updated_at with the current datetime"""
-        self.updated_at = (datetime.now()).strftime("%Y-%m-%dT%H:%M:%S.%f")
+        self.updated_at = datetime.now()
 
     
     def to_dict(self):
+        """ returns a dictionary containing all keys/values of __dict__ of the instance"""
+        #new_dict = self.__dict__.copy()
+        new_dict = {}
+        for key, value in self.__dict__.items():
+            if key in ('created_at', 'updated_at'):
+                new_dict[key] = value.strftime("%Y-%m-%dT%H:%M:%S.%f")
+            else:
+                new_dict[key] = value
+        new_dict['__class__'] = self.__class__.__name__
+        return new_dict

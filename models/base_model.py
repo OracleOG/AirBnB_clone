@@ -6,6 +6,7 @@ contains the class Basemodel where all base attributes of the project is created
 """
 import uuid
 from datetime import datetime
+import models
 
 class BaseModel:
     """Defines all the common attributes/methods for other classes

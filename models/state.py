@@ -4,7 +4,7 @@
 
 contains the class State that inherits from BaseModel
 """
-from models.task_5 import BaseModel
+from models.base_model import BaseModel
 
 
 class State(BaseModel):

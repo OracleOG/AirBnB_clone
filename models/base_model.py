@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-
-""" a module that test the cmd module features of python.
+"""
+A module that test the cmd module features of python.
 
 contains the class Basemodel where all base
 attributes of the project is created from
 """
 import uuid
 from datetime import datetime
-from models import storage
+from . import storage
 
 
 class BaseModel:

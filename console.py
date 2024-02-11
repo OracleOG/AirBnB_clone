@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-""" a module that test the cmd module features of python.
+"""
+a module that test the cmd module features of python.
 
 contains the console for the first part of the Airbnb Clone project
 """
 import cmd
-from models.task_5 import BaseModel
+from models.base_model import BaseModel
 from models.user import User
 from models.place import Place
 from models.amenity import Amenity

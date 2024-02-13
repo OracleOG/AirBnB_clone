@@ -156,7 +156,7 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, line):
         """command exits the console"""
         return True
-    
+
     def emptyline(self):
         """do nothing when empty line"""
         pass
